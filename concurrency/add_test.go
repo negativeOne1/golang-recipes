@@ -7,9 +7,7 @@ import (
 )
 
 var (
-	thousand = 1000
-	million  = thousand * thousand
-	numbers  = rand.Perm(10 * million)
+	numbers = rand.Perm(1e6)
 )
 
 func BenchmarkSequential(b *testing.B) {
