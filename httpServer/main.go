@@ -3,7 +3,6 @@ package main
 import (
 	"os"
 	"strings"
-	"time"
 
 	"github.com/caarlos0/env/v6"
 	"github.com/rs/zerolog"
@@ -15,10 +14,6 @@ type Config struct {
 	LogLevel    string `env:"LOG_LEVEL" envDefault:"info"`
 	LogFormat   string `env:"LOG_FORMAT" envDefault:"json"`
 }
-
-const (
-	gracePeriod = 30 * time.Second
-)
 
 func main() {
 	if err := r(); err != nil {
